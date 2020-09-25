@@ -1,12 +1,11 @@
-
 #include "robot_ctrl/robot_ctrl.h"
 #include "geometry_msgs/Quaternion.h" 
 #include "geometry_msgs/Point.h" 
 #include "tf/transform_datatypes.h"//转换函数头文件 
 #include <cmath>
 
-// max vel: 0.22
-// max ang:2.84 rad/s
+// max vel: 1.0 m/s
+// max ang:2.8 rad/s
 
 Robot::Robot()
 {  
@@ -14,6 +13,7 @@ Robot::Robot()
     std::string topic_model_state = "/gazebo/model_states";
 
     nh.param("ball_name",ball_name,std::string("ball"));
+   
     ROS_INFO("ball_name: %s",ball_name.c_str());
 
     sub_model_pos = nh.subscribe(topic_model_state, 10, &Robot::ModelStateCallback, this);
@@ -46,8 +46,8 @@ void Robot::ModelStateCallback(const gazebo_msgs::ModelStates::ConstPtr &cur_sta
     position_robot = pose_robot.position;
     quat_robot = pose_robot.orientation;
 
-    ROS_INFO("bx: %.03f, by: %.03f",position_ball.x,position_ball.y);
-    ROS_INFO("rx: %.03f, ry: %.03f",position_robot.x,position_robot.y);
+    //ROS_INFO("bx: %.03f, by: %.03f",position_ball.x,position_ball.y);
+    //ROS_INFO("rx: %.03f, ry: %.03f",position_robot.x,position_robot.y);
 
     // convert quat 2 yaw
     tf::Quaternion quat;
@@ -58,14 +58,14 @@ void Robot::ModelStateCallback(const gazebo_msgs::ModelStates::ConstPtr &cur_sta
     orientation_robot = yaw;
 
 
-    ROS_INFO_STREAM("orientation:"  << yaw);
+    //ROS_INFO_STREAM("orientation:"  << yaw);
 }
 
 void Robot::RobotTwistPub(double velocity,double angular)
 {
     if(velocity > MAX_LIN_VEL) velocity = MAX_LIN_VEL;
     if(angular > MAX_ANG_VEL) angular = MAX_ANG_VEL;
-    ROS_INFO("linear: %.03f, angular: %.03f",velocity,angular);
+    //ROS_INFO("linear: %.03f, angular: %.03f",velocity,angular);
     geometry_msgs::Twist vel;
     vel.linear.x = velocity;
     vel.angular.z = angular;
