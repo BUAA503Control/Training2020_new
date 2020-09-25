@@ -5,6 +5,5 @@
 安装与ubuntu对应版本ros，安装教程请前往ros wiki 官网 http://wiki.ros.org/ 按教程安装
 
 # 代码内容
-/gazebo_simulator：机器人模型，拷贝到ros工作空间src文件夹下
-/src: 示例程序，拷贝到ros工作空间src文件夹下
+/src: 机器人模型与示例程序，拷贝到ros工作空间文件夹下与原src文件夹合并
 
