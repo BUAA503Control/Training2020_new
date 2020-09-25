@@ -1,0 +1,10 @@
+
+
+home:
+  prefix: "home"                 # Team name prefix. 
+  num: 1
+ 
+guest:
+  prefix: "guest"                # Rival name prefix. 
+  num: 0
+
