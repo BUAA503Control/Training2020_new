@@ -8,8 +8,8 @@ from geometry_msgs.msg import Point, Quaternion,Twist,Pose
 from gazebo_msgs.msg import ModelStates
 from tf.transformations import quaternion_from_euler,euler_from_quaternion
 
-# max vel: 0.22
-# max ang:2.84 rad/s
+# max vel: 1.0 m/s
+# max ang:2.8 rad/s
 
 # rate = rospy.Rate(200)
 rate = 200. # twist pub rate
@@ -67,7 +67,7 @@ def robot2ball(event):
     # TODO: write your code here
     
     
-    rospy.loginfo("ball_x: {0:.3f}".format(ball_x))
+    #rospy.loginfo("ball_x: {0:.3f}".format(ball_x))
     # set the control linear velocity in x axis and yaw angular velocity
     cmd_vel_pub(velocity,angular)
 
