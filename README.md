@@ -5,6 +5,6 @@
 安装与ubuntu对应版本ros，安装教程请前往ros wiki 官网 http://wiki.ros.org/ 按教程安装
 
 # 代码内容
-/src: 机器人模型与示例程序，拷贝到ros工作空间文件夹下与原src文件夹合并
+/src: 机器人模型与示例程序，拷贝到ros工作空间文件夹下与原src文件夹合并  
 Football_field.pdf 球场坐标文件
 
