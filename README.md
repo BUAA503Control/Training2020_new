@@ -52,7 +52,7 @@ $ sudo apt-get install build-essential git
 ```
 $ git clone https://github.com/BUAA503Control/Training2020_new
 ```
-## clone code 
+## clone code to ros workspace
 ```
 $ cp -r Training2020_new/src/. ~/ccc/src/
 ```
