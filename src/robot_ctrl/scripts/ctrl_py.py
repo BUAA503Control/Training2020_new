@@ -8,8 +8,8 @@ from geometry_msgs.msg import Point, Quaternion,Twist,Pose
 from gazebo_msgs.msg import ModelStates
 from tf.transformations import quaternion_from_euler,euler_from_quaternion
 
-# max vel: 1.0 m/s
-# max ang:2.8 rad/s
+# max vel: 1.2 m/s
+# max ang:10.0 rad/s
 
 # rate = rospy.Rate(200)
 rate = 30. # twist pub rate
