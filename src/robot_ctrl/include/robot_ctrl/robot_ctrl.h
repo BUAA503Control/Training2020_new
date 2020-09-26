@@ -14,8 +14,8 @@
 #include "geometry_msgs/Quaternion.h" 
 #include "geometry_msgs/Point.h"
 
-#define MAX_LIN_VEL 1.0
-#define MAX_ANG_VEL 2.8  
+#define MAX_LIN_VEL 1.2
+#define MAX_ANG_VEL 10.0 
 #define PI 3.14159265
    
 class Robot

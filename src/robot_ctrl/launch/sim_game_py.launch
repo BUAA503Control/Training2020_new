@@ -1,0 +1,9 @@
+  <launch>
+    <arg name="ball_name_default" default="ball"/>
+    <!-- global param -->
+    <param name="ball_name" type="string" value="$(arg ball_name_default)"/>
+	<node pkg="robot_ctrl" type="ctrl_py.py" name="ctrl_py" output="screen"> 
+    </node> 
+    <rosparam file="$(find robot_ctrl)/config/config.yaml" command="load" />
+</launch>
+  

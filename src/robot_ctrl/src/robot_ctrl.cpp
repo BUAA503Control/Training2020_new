@@ -12,7 +12,7 @@ Robot::Robot()
     index_ball = index_robot = -1;
     std::string topic_model_state = "/gazebo/model_states";
 
-    nh.param("ball_name",ball_name,std::string("ball"));
+    nh.param("ball_name",ball_name,std::string("ball0"));
    
     ROS_INFO("ball_name: %s",ball_name.c_str());
 

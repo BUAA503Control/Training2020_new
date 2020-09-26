@@ -19,8 +19,8 @@ index_ball = -1
 
 pub_model_twist = rospy.Publisher("/cmd_vel",Twist, queue_size=10)
 
-MAX_LIN_VEL = 1.0
-MAX_ANG_VEL = 2.8  
+MAX_LIN_VEL = 1.2
+MAX_ANG_VEL = 10.0
 PI = 3.14159265
 position_ball = Point()
 position_robot = Point()
@@ -43,6 +43,10 @@ def cb_model_pose(model_state):
     (_,_,yaw_robot) = euler_from_quaternion([quat_robot.x, quat_robot.y, quat_robot.z, quat_robot.w])
     
     #rospy.loginfo("orientation: {0:.3f}".format(yaw_robot))
+    #rospy.loginfo("rx: {0:.3f}".format(position_robot.x))
+    #rospy.loginfo("ry: {0:.3f}".format(position_robot.y))
+    #rospy.loginfo("bx: {0:.3f}".format(position_ball.x))
+    #rospy.loginfo("by: {0:.3f}".format(position_ball.y))
 
 
 def cmd_vel_pub(lin_x,ang_z):
@@ -74,7 +78,7 @@ def robot2ball(event):
 if __name__ == "__main__":
     rospy.init_node("ctrl_py",anonymous=True)
     sub_model_state = rospy.Subscriber("/gazebo/model_states",ModelStates,cb_model_pose)
-    para_ball_name = rospy.get_param("ball_name",default="ball")
+    para_ball_name = rospy.get_param("ball_name",default="ball0")
     rospy.loginfo("ball_name"+str(para_ball_name))
 
     cmdTimer = rospy.Timer(rospy.Duration(1/rate),robot2ball)
