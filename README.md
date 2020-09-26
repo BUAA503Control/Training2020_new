@@ -86,5 +86,5 @@ $ roslaunch robot_ctrl sim_game.launch
 $ roslaunch robot_ctrl sim_game_py.launch
 ```
 
-运行成功效果：球在场内转圈圈
+运行成功效果：机器人在场内转圈圈
 
