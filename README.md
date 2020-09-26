@@ -10,12 +10,24 @@ Football_field.pdf 球场坐标文件
 ## 仿真环境文件夹
 /src/gazebo_simulator: 仿真环境
 ## 示例代码目录结构
-config/config.yaml	参数文件  
-include/robot_ctrl/robot_ctrl.h	cpp头文件    
-launch/sim_game.launch	cpp程序launch文件  
-launch/sim_game_py.launch  python程序launch文件  
-scripts/ctrl_py.py	python程序  
-src/robot_ctrl.cpp	cpp源文件  
+```
+|-- robot_ctrl
+            |-- CMakeLists.txt  		编译Cmake文件
+            |-- package.xml		 	ros配置文件
+            |-- config		
+            |   |-- config.yaml	 	 参数文件
+            |-- include
+            |   |-- robot_ctrl
+            |       |-- robot_ctrl.h	 cpp头文件
+            |-- launch
+            |   |-- sim_game.launch	  cpp程序launch文件
+            |   |-- sim_game_py.launch   python程序launch文件
+            |-- scripts			
+            |   |-- ctrl_py.py			python程序
+            |-- src
+                |-- robot_ctrl.cpp		cpp源文件
+```
+
 
 # 代码编译
 
