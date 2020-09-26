@@ -4,8 +4,8 @@
 #include "tf/transform_datatypes.h"//转换函数头文件 
 #include <cmath>
 
-// max vel: 1.0 m/s
-// max ang:2.8 rad/s
+// max vel: 1.2m/s
+// max ang:10.0rad/s
 
 Robot::Robot()
 {  
