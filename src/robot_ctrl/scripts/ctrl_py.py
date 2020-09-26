@@ -12,7 +12,7 @@ from tf.transformations import quaternion_from_euler,euler_from_quaternion
 # max ang:2.8 rad/s
 
 # rate = rospy.Rate(200)
-rate = 200. # twist pub rate
+rate = 30. # twist pub rate
 
 index_robot = -1
 index_ball = -1
