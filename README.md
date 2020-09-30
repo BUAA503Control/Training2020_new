@@ -33,6 +33,19 @@ Football_field.pdf 球场坐标文件
 
 ## Install ROS
 http://wiki.ros.org/melodic/Installation/Ubuntu
+## Source develop env
+```
+$ echo "source /opt/ros/kinetic/setup.bash" >> ~/.bashrc
+$ echo "source ~/catkin_ws/devel/setup.bash" >> ~/.bashrc
+$ source ~/.bashrc
+```
+
+## 创建代码工作空间
+```
+$ mkdir -p ~/catkin_ws/src
+$ cd ~/catkin_ws/
+$ catkin_make
+```
 
 ## Install Gazebo
 http://gazebosim.org/tutorials?tut=install_ubuntu
@@ -48,6 +61,7 @@ $ sudo apt-get install libgazebo9-dev
 ## install build-essential & git
 ```
 $ sudo apt-get install build-essential git 
+$ sudo apt-get install ros-melodic-mavros
 ```
 
 ## clone code
@@ -56,7 +70,7 @@ $ git clone https://github.com/BUAA503Control/Training2020_new
 ```
 ## clone code to ros workspace
 ```
-$ cp -r Training2020_new/src/. ~/ccc/src/
+$ cp -r Training2020_new/src/. ~/catkin_ws/src/
 ```
 ## enable operation authority
 ```
@@ -68,7 +82,7 @@ $ chmod a+x ~/catkin_ws/src/robot_ctrl/scripts/ctrl_py.py
 ## compile 
 ```
 $ cd ~/cakin_ws/   
-$ catkin_make (or $ catkin build)
+$ catkin_make (or  catkin build)
 ```
 # 代码运行
 ## launch simulation
